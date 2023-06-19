@@ -19,11 +19,19 @@
 
 var express = require('express');
 var http = require('http');
+var fs = require('fs');
 
 var app = express();
 app.use(express.static(__dirname + '/client'))
-app.get('/', function(req, res) {
-	res.sendFile(__dirname + '/client/html/index.html');
+app.set('view engine', 'ejs');
+app.get('/:ip_addr', function(req, res) {
+	//const html = fs.readFileSync(__dirname + '/client/html/index.html');
+	//res.render({html: html.toString(), data: {ipAddress: '1.2.3.1'}});
+	const data = {
+		ipAddress: req.params.ip_addr
+	}
+	res.render(__dirname + '/client/html/index', data);
+	//res.render(__dirname + '/client/html/index.html');
 });
 var server = http.createServer(app).listen(process.env.PORT || 9250);
 

@@ -63,6 +63,7 @@ module.exports = function (server) {
 			rdpClient.sendWheelEvent(x, y, step, isNegative, isHorizontal);
 		}).on('scancode', function (code, isPressed) {
 			if (!rdpClient) return;
+			console.log('scancode >>> ', code, isPressed);
 
 			rdpClient.sendKeyEventScancode(code, isPressed);
 		}).on('unicode', function (code, isPressed) {

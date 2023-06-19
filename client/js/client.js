@@ -142,7 +142,6 @@
 			var parts = document.location.pathname.split('/')
 		      , base = parts.slice(0, parts.length - 1).join('/') + '/'
 		      , path = base + 'socket.io';
-      console.log('connect >>> ', parts);
 			
 			
 			// start connection
