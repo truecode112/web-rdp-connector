@@ -168,6 +168,7 @@
 			this.socket.emit('infos', {
 				ip : ip.indexOf(":")>-1 ? ip.split(":")[0] : ip,
 				port : ip.indexOf(":")>-1 ? parseInt(ip.split(":")[1]) : 3389,
+				// port : ip.indexOf(":")>-1 ? parseInt(ip.split(":")[1]) : 7777,
 				screen : { 
 					width : this.canvas.width, 
 					height : this.canvas.height 

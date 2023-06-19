@@ -13,6 +13,7 @@
 	},
 	"main": "server.js",
 	"dependencies": {
+		"cross-node-rdp": "^1.0.9",
 		"express": "4.x.x",
 		"node-rdpjs": ">=0.2.0",
 		"rdpjs": "^0.3.3",
