@@ -33,6 +33,6 @@ app.get('/:ip_addr', function(req, res) {
 	res.render(__dirname + '/client/html/index', data);
 	//res.render(__dirname + '/client/html/index.html');
 });
-var server = http.createServer(app).listen(process.env.PORT || 9250);
+var server = http.createServer(app).listen(9250);
 
 require('./server/mstsc')(server);
